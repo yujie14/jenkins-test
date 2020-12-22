@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker {image 'maven:3.3.3'} }
+    agent { docker 'maven:3.3.3'}
     stages {
         stage('build') {
             steps {
@@ -9,7 +9,7 @@ pipeline {
     }
 }
 pipeline {
-    agent { docker {image 'node:6.3' } }
+    agent { docker 'node:6.3' }
     stages {
         stage('build') {
             steps {
@@ -19,7 +19,7 @@ pipeline {
     }
 }
 pipeline {
-    agent { docker {image 'ruby' } }
+    agent { docker 'ruby' }
     stages {
         stage('build') {
             steps {
@@ -30,7 +30,7 @@ pipeline {
 }
 
 pipeline {
-    agent { docker {image{'python:3.5.1' } }
+    agent { docker 'python:3.5.1' }
     stages {
         stage('build') {
             steps {
@@ -40,7 +40,7 @@ pipeline {
     }
 }
 pipeline {
-    agent { docker {image 'php' } }
+    agent { docker 'php' }
     stages {
         stage('build') {
             steps {
